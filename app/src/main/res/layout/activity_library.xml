@@ -1,9 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Library">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/activity_horizontal_margin">
 
-</RelativeLayout>
+    <Button
+        android:id="@+id/left_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/left_text"
+        android:background="@color/colorAccent"/>
+
+    <Button
+        android:id="@+id/right_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/right_text"
+        android:background="@color/colorAccent"
+        app:layout_constraintRight_toRightOf="@+id/main"
+        />
+
+    <Button
+        android:id="@+id/below_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/below_left_text"
+        android:background="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@+id/left_button"
+        />
+
+    <Button
+        android:id="@+id/center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/center_text"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/main"
+        app:layout_constraintRight_toRightOf="@+id/main"
+        app:layout_constraintLeft_toLeftOf="@+id/main"
+        app:layout_constraintTop_toTopOf="@+id/main"
+        />
+
+    <Button
+        android:id="@+id/bottom_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bottom_center_text"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/main"
+        app:layout_constraintRight_toRightOf="@+id/main"
+        app:layout_constraintLeft_toLeftOf="@+id/main"
+        />
+
+    <Button
+        android:id="@+id/above_below"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/above_bottom_center_text"
+        android:background="@color/colorAccent"
+        app:layout_constraintRight_toRightOf="@+id/main"
+        app:layout_constraintLeft_toLeftOf="@+id/main"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_center"
+        />
+
+</android.support.constraint.ConstraintLayout>
