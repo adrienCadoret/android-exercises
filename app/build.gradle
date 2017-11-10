@@ -23,7 +23,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
 
     def support_version = "26.0.1"
-
+    compile 'com.squareup.picasso:picasso:2.5.1'
     compile(
             "com.android.support:appcompat-v7:$support_version",
             "com.android.support:design:$support_version"
